@@ -204,5 +204,8 @@ cython_debug/
 # Marimo
 marimo/_static/
 marimo/_lsp/
-__marimo__/.env
+__marimo__/
+.env
 .DS_Store
+.DS_Store
+**/.DS_Store
