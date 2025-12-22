@@ -30,9 +30,12 @@ def github_file():
     Resource for accessing langchain-ai/langchain-mcp-adapters/README.md file
 
     """
-    url = f"https://raw.githubusercontent.com/langchain-ai/langchain-mcp-adapters/blob/main/README.md"
+    #url = f"https://raw.githubusercontent.com/langchain-ai/langchain-mcp-adapters/blob/main/README.md"
+    url = f"https://raw.githubusercontent.com/langchain-ai/langchain-mcp-adapters/main/README.md"
     try:
         resp = get(url)
+        print("HTTP status:", resp.status_code)
+        resp.raise_for_status()
         return resp.text
     except Exception as e:
         return f"Error: {str(e)}"
